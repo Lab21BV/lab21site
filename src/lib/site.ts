@@ -27,7 +27,7 @@ export type NavGroup = {
 
 export const NAV: NavGroup[] = [
   {
-    label: "Houten vloeren",
+    label: "Vloeren",
     href: "/houten-vloeren",
     feature: {
       title: "Eiken visgraat — tijdloos karakter",
@@ -37,7 +37,7 @@ export const NAV: NavGroup[] = [
     },
     columns: [
       {
-        heading: "Categorieën",
+        heading: "Houten vloeren",
         items: [
           { label: "Eiken vloeren", href: "/houten-vloeren#eiken" },
           { label: "Eiken visgraat", href: "/houten-vloeren#visgraat" },
@@ -47,38 +47,7 @@ export const NAV: NavGroup[] = [
         ],
       },
       {
-        heading: "Collecties",
-        items: [
-          { label: "Original Dutch", href: "/houten-vloeren#original-dutch" },
-          { label: "Nordic", href: "/houten-vloeren#nordic" },
-          { label: "Country", href: "/houten-vloeren#country" },
-          { label: "Highland", href: "/houten-vloeren#highland" },
-          { label: "Click Urban", href: "/houten-vloeren#click-urban" },
-        ],
-      },
-      {
-        heading: "Service",
-        items: [
-          { label: "Legservice", href: "/houten-vloeren#legservice" },
-          { label: "Onderhoud", href: "/houten-vloeren#onderhoud" },
-          { label: "Vloerverwarming", href: "/houten-vloeren#verwarming" },
-          { label: "Productinformatie", href: "/houten-vloeren#info" },
-        ],
-      },
-    ],
-  },
-  {
-    label: "PVC vloeren",
-    href: "/pvc-vloeren",
-    feature: {
-      title: "PVC visgraat vanaf €29,95",
-      href: "/pvc-vloeren#visgraat",
-      image:
-        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=900&q=70",
-    },
-    columns: [
-      {
-        heading: "Soorten",
+        heading: "PVC vloeren",
         items: [
           { label: "Klik PVC", href: "/pvc-vloeren#klik" },
           { label: "Lijm PVC", href: "/pvc-vloeren#lijm" },
@@ -88,61 +57,71 @@ export const NAV: NavGroup[] = [
         ],
       },
       {
-        heading: "Merken",
+        heading: "Laminaat",
         items: [
-          { label: "Moduleo", href: "/pvc-vloeren#moduleo" },
-          { label: "Floorlife", href: "/pvc-vloeren#floorlife" },
-          { label: "Ambiant", href: "/pvc-vloeren#ambiant" },
-          { label: "Belakos", href: "/pvc-vloeren#belakos" },
-          { label: "mFlor", href: "/pvc-vloeren#mflor" },
-        ],
-      },
-      {
-        heading: "Service",
-        items: [
-          { label: "Legdienst", href: "/pvc-vloeren#legdienst" },
-          { label: "Onderhoud", href: "/pvc-vloeren#onderhoud" },
-          { label: "Productinformatie", href: "/pvc-vloeren#info" },
+          { label: "Klik laminaat", href: "/laminaat#klik" },
+          { label: "Visgraat laminaat", href: "/laminaat#visgraat" },
+          { label: "Watervast", href: "/laminaat#watervast" },
+          { label: "Wit laminaat", href: "/laminaat#wit" },
+          { label: "Tegel laminaat", href: "/laminaat#tegel" },
         ],
       },
     ],
   },
   {
-    label: "Laminaat",
-    href: "/laminaat",
+    label: "Raamdecoratie",
+    href: "/raamdecoratie",
     feature: {
-      title: "Watervast laminaat — sterk & stijlvol",
-      href: "/laminaat#watervast",
+      title: "Op maat gemaakt — gratis ingemeten",
+      href: "/raamdecoratie",
       image:
-        "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=70",
+        "https://images.unsplash.com/photo-1505692433770-36f19f51681d?auto=format&fit=crop&w=900&q=70",
     },
     columns: [
       {
         heading: "Soorten",
         items: [
-          { label: "Klik laminaat", href: "/laminaat#klik" },
-          { label: "Visgraat laminaat", href: "/laminaat#visgraat" },
-          { label: "Tegel laminaat", href: "/laminaat#tegel" },
-          { label: "Wit laminaat", href: "/laminaat#wit" },
-          { label: "Watervast", href: "/laminaat#watervast" },
-        ],
-      },
-      {
-        heading: "Merken",
-        items: [
-          { label: "Poseidon", href: "/laminaat#poseidon" },
-          { label: "Neptune", href: "/laminaat#neptune" },
-          { label: "Floorlife", href: "/laminaat#floorlife" },
-          { label: "Heritage", href: "/laminaat#heritage" },
-          { label: "Portwood", href: "/laminaat#portwood" },
+          { label: "Gordijnen", href: "/raamdecoratie#gordijnen" },
+          { label: "Jaloezieën", href: "/raamdecoratie#jaloezieen" },
+          { label: "Plissé", href: "/raamdecoratie#plisse" },
+          { label: "Rolgordijnen", href: "/raamdecoratie#rol" },
         ],
       },
       {
         heading: "Service",
         items: [
-          { label: "Legservice", href: "/laminaat#legservice" },
-          { label: "Onderhoud", href: "/laminaat#onderhoud" },
-          { label: "Restpartijen", href: "/laminaat#restpartijen" },
+          { label: "Gratis inmeten", href: "/raamdecoratie#inmeten" },
+          { label: "Montage", href: "/raamdecoratie#montage" },
+          { label: "Stoffenadvies", href: "/raamdecoratie#stoffen" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Meubels",
+    href: "/meubels",
+    feature: {
+      title: "Europese makers — gemaakt voor het leven",
+      href: "/meubels",
+      image:
+        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=900&q=70",
+    },
+    columns: [
+      {
+        heading: "Wonen",
+        items: [
+          { label: "Eettafels", href: "/meubels#tafels" },
+          { label: "Banken", href: "/meubels#banken" },
+          { label: "Kasten", href: "/meubels#kasten" },
+          { label: "Stoelen", href: "/meubels#stoelen" },
+        ],
+      },
+      {
+        heading: "Accessoires",
+        items: [
+          { label: "Vloerkleden", href: "/meubels#vloerkleden" },
+          { label: "Verlichting", href: "/meubels#verlichting" },
+          { label: "Wooninspiratie", href: "/inspiratie" },
         ],
       },
     ],
@@ -183,17 +162,17 @@ export const FOOTER_COLS = [
     items: [
       { label: "Over ons", href: "/over-lab21" },
       { label: "Showrooms", href: "/showrooms" },
-      { label: "Werken bij", href: "/over-lab21#werken-bij" },
+      { label: "Vacatures", href: "/over-lab21#werken-bij" },
       { label: "Duurzaamheid", href: "/over-lab21#duurzaamheid" },
     ],
   },
   {
     heading: "Collectie",
     items: [
-      { label: "Houten vloeren", href: "/houten-vloeren" },
-      { label: "PVC vloeren", href: "/pvc-vloeren" },
-      { label: "Laminaat", href: "/laminaat" },
-      { label: "Restpartijen", href: "/laminaat#restpartijen" },
+      { label: "Vloeren", href: "/houten-vloeren" },
+      { label: "Raamdecoratie", href: "/raamdecoratie" },
+      { label: "Meubels", href: "/meubels" },
+      { label: "Inspiratie", href: "/inspiratie" },
     ],
   },
   {
