@@ -81,11 +81,54 @@ const WOONSTIJLEN = [
   },
 ];
 
-const USPS = [
-  { t: "12 showrooms", d: "Persoonlijk advies in heel Nederland" },
-  { t: "Eigen legdienst", d: "Vakkundig gelegd door onze specialisten" },
-  { t: "Prijsgarantie", d: "Bij ons koopt u altijd voordelig" },
-  { t: "Trustpilot · 9,2 / 10", d: "4.000+ reviews van klanten" },
+const ICON_CLS = "shrink-0 mt-[2px] text-tan";
+const USPS: {
+  t: string;
+  d: string;
+  href?: string;
+  icon: React.ReactNode;
+}[] = [
+  {
+    t: "12 showrooms",
+    d: "Persoonlijk advies in heel Nederland",
+    href: "/showrooms",
+    icon: (
+      <svg className={ICON_CLS} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </svg>
+    ),
+  },
+  {
+    t: "Eigen legdienst",
+    d: "Vakkundig gelegd door onze specialisten",
+    icon: (
+      <svg className={ICON_CLS} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="m14 4 6 6-9 9H5v-6l9-9Z" />
+        <path d="m13.5 4.5 6 6" />
+      </svg>
+    ),
+  },
+  {
+    t: "Prijsgarantie",
+    d: "Bij ons koopt u altijd voordelig",
+    icon: (
+      <svg className={ICON_CLS} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+        <path d="m20 12-8 8-8-8 8-8 8 8Z" />
+        <path d="M9 12h6M12 9v6" />
+      </svg>
+    ),
+  },
+  {
+    t: "Trustpilot · 9,2 / 10",
+    d: "4.000+ reviews van klanten",
+    href: "https://nl.trustpilot.com/review/www.lab21.nl",
+    icon: (
+      <svg className={ICON_CLS} width="20" height="20" viewBox="0 0 24 24" fill="#00b67a" stroke="none">
+        <path d="m12 2 2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8L5.7 21l1.7-7L2 9.2l7.1-.6L12 2Z" />
+      </svg>
+    ),
+  },
 ];
 
 const EXPERTISE_IMG =
@@ -142,9 +185,23 @@ export default function Home() {
         <Container className="py-6">
           <ul className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4">
             {USPS.map((u) => (
-              <li key={u.t} className="flex flex-col">
-                <span className="text-[14px] font-medium text-ink">{u.t}</span>
-                <span className="text-[12.5px] text-muted">{u.d}</span>
+              <li key={u.t} className="flex items-start gap-3">
+                {u.icon}
+                <div className="flex flex-col">
+                  {u.href ? (
+                    <Link
+                      href={u.href}
+                      target={u.href.startsWith("http") ? "_blank" : undefined}
+                      rel={u.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="text-[14px] font-medium text-ink hover:text-clay transition-colors"
+                    >
+                      {u.t}
+                    </Link>
+                  ) : (
+                    <span className="text-[14px] font-medium text-ink">{u.t}</span>
+                  )}
+                  <span className="text-[12.5px] text-muted">{u.d}</span>
+                </div>
               </li>
             ))}
           </ul>

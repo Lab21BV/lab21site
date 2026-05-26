@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function PromoBar() {
   return (
-    <div className="bg-ink text-bone text-[11.5px] tracking-[0.18em] uppercase">
-      <div className="mx-auto max-w-[1600px] px-6 md:px-10 h-11 flex items-center justify-between gap-6">
+    <div className="bg-ink text-bone text-[12px] tracking-[0.18em] uppercase">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-10 h-12 md:h-[52px] flex items-center justify-between gap-6">
         <span className="hidden md:block opacity-80">
           12 showrooms in Nederland
         </span>
